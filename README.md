@@ -43,6 +43,7 @@
 ---
 ## Methoden / Funktionen
 - Ein return pro Funktion
+- maximal drei Argumente pro Funktion
 - Argument-Sektion benutzen
 - keine Magic Numbers bei Funktionsaufrufen
 - Single Responsibility! Wenn eine Methode mehr als eine Sache macht: Aufteilen!
