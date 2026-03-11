@@ -1,0 +1,62 @@
+package c01_codesmells;
+
+public class CodeSmells4 {
+    // Data Classes: Original
+    class UserData {
+        private String name;
+        private int age;
+        private String email;
+        private String address;
+
+        // Getters and setters - no real behaviour
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+    }
+
+    // Refused Bequest: Original
+    abstract class Animal {
+        abstract void makeSound();
+
+        public void fly() {
+            System.out.println("This animal can fly.");
+        }
+    }
+
+    class Dog extends Animal {
+        @Override
+        void makeSound() {
+            System.out.println("Bark!");
+        }
+        // Dog inherits fly(), but it doesn't make sense for a dog to fly
+    }
+
+}
